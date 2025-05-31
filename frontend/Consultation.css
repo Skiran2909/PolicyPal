@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+        margin: 0;                   /* Removes default margin */
+        width: 100%;            /* Ensures full viewport height */
+        min-height: 100vh; /* Ensures body covers full viewport height */
+        height: auto;
+        position: relative;
+        /* color: #fff; */
+        line-height: 1.6;
+
+        /* background: linear-gradient(to right, #f0f4f8, #e6eff6); */
+        background: linear-gradient(to right, #000000d8, #333333);
+}
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    /* background: #0b132b; */
+    color: white;
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header .nav-links a {
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+header .call-now span {
+    color: #00ff9d;
+}
+
+.foot h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.foot img{
+    height: 3vh;
+    margin-right: 35px;
+}
+
+.foot div{
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1rem;
+}
+
+.foot{
+    padding: 1%;
+    border-top: 1px solid rgba(255, 255, 255, 0.736);
+    color: white;
+}
+
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            margin-bottom: 10%;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #003366;
+            margin-bottom: 1rem;
+        }
+
+        p.intro {
+            text-align: center;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        input, select, textarea {
+            padding: 0.75rem;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1rem;
+        }
+
+        button {
+            background-color: #003366;
+            color: #fff;
+            border: none;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #00509e;
+        }
+
+        .side-info {
+            margin-top: 2rem;
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 8px;
+            
+        }
+
+        .side-info p {
+            margin: 0.5rem 0;
+        }
+
+        .thank-you {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .thank-you h3 {
+            color: #28a745;
+        }
+
+        @media (min-width: 768px) {
+            form {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem 2rem;
+            }
+
+            form textarea {
+                grid-column: span 2;
+            }
+
+            button {
+                grid-column: span 2;
+            }
+        }

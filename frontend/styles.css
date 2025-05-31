@@ -1,0 +1,327 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+
+body {
+        background-image: url('bg.jpg');
+        background-size: 100% auto;       /* Covers the entire viewport */
+        background-position: top center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents repeating */
+        
+        margin: 0;                   /* Removes default margin */
+        width: 100%;            /* Ensures full viewport height */
+        min-height: 100vh; /* Ensures body covers full viewport height */
+        height: auto;
+        position: relative;
+        color: #fff;
+        line-height: 1.6;
+}
+
+
+a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+header.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    /* background: #0b132b; */
+}
+
+header .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+header .nav-links a {
+    margin: 0 15px;
+    font-size: 1rem;
+}
+
+header .call-now span {
+    color: #00ff9d;
+}
+
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 90px 150px;
+    /* background: #1b263b; */
+    position: relative;
+}
+
+.hero-text {
+    max-width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    color: #61dafb;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    max-width: 400px;
+}
+
+/* .quote-box {
+    padding: 30px;
+    border-radius: 15px;
+    width: 400px;
+    position: absolute;
+    right:13%;
+}
+
+@media (max-width: 768px) {
+  .quote-box {
+    top: 25%;
+    left: 15%;
+    font-size: 0.9em; 
+  }
+} */
+
+.quote-box {
+    padding: 2.2vw;
+    border-radius: 15px;
+    width: 25vw;
+    min-width: 280px;  /* Slightly increased for better form display */
+    max-width: 400px;
+    position: absolute;
+    right: 13%;
+    top: 65%;  /* Changed from 82% to center vertically */
+    transform: translateY(-50%);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    z-index: 10; 
+}
+
+@media (max-width: 768px) {
+    .quote-box {
+        width: 85vw;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        top:auto;
+        margin: 5vh auto;
+        position: relative;
+        padding: 5vw;
+    }
+    
+    .quote-box input,
+    .quote-box select,
+    .quote-box textarea {
+        padding: 1.5vh 3vw;
+    }
+}
+
+.quote-box h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+}
+
+.quote-box form input,
+.quote-box form select,
+.quote-box form textarea {
+    width: 100%;
+    margin: 8px 0;
+    /* padding: 10px; */
+    padding: 1.2vh 1vw;
+    border: none;
+    border-radius: 8px;
+}
+
+.navbar button {
+    padding: 1.2vh;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+        
+.quote-box form button {
+    width: 100%;
+    padding: 1.5vh 0;
+    border: none;
+    border-radius: 8px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.insurance-section {
+    display: flex;
+    /* align-items: center; */
+    padding: 220px 180px;
+    position: relative;
+    /* background: #1b263b; */
+}
+
+.insurance-icons {
+    display: flex;
+    flex-direction: column;
+    margin-right: 30px;
+    position: relative;
+}
+
+.insurance-icons .icon {
+    /* background: #1e40af; */
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    border: 2px solid white;
+    padding: 40px;
+}
+
+    .icon {
+        cursor: pointer;
+        /* transition: transform 0.2s; */
+        transition: transform 0.2s, box-shadow 0.3s;
+    }
+
+    /* .icon:hover {
+        transform: scale(1.2);
+    } */
+
+    .icon.active {
+        border: 6px solid #007bff;
+        background-color: #16466f;
+    }
+
+.icon{
+    position: relative; 
+    z-index: 1;
+    /* transition: all 0.3s ease; */
+}
+
+.icon.active::after {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 6px;
+    background: #007bff;
+    left: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.content {
+    display: none;
+    /* padding: 15px; */
+    padding: 10% 10% 10% 10%;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: box-shadow 0.3s, border-color 0.3s;
+}
+
+.content.active {
+    /* border-color: #16466f; */
+    box-shadow: 0 0 20px rgba(0, 123, 255, 0.3);
+    background-color: #16456f7a;
+}
+
+.insurance-content {
+    max-width: auto;
+    margin-right: 30px;
+    margin-left: 20px;
+    /* margin-top: 20px; */
+}
+
+.insurance-content h3 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.insurance-image img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        align-items: center;
+    }
+    .hero-text, .quote-box {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+    .insurance-section {
+        flex-direction: column;
+        align-items: center;
+    }
+    .insurance-content, .insurance-image {
+        margin-bottom: 20px;
+    }
+}
+
+.why-us{
+    display: flex;
+    width: 100%;
+    margin-bottom: 5%;
+}
+.ans{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    flex: 1;
+    margin-left: 20%;
+    margin-right: auto;
+}
+.ques{
+    border-radius: 50% 0% 0% 50%;
+    background-color: #16456fbf;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px 40px 80px;
+    font-size: 3rem;
+}
+
+.foot h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.foot img{
+    width: 5vh;
+    height: 4vh;
+    margin-right: 35px;
+}
+
+.foot div{
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 1.8rem;
+}
+
+.foot{
+    padding: 7%;
+    border-top: 1px solid rgba(255, 255, 255, 0.736);
+}
