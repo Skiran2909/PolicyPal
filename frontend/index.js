@@ -53,7 +53,7 @@ form.addEventListener('submit', async (e) => {
   };
 
   try {
-    const res = await fetch('http://localhost:5000/api/quotes', {
+    const res = await fetch('https://policypal-4hrz.onrender.com/api/quotes', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),
