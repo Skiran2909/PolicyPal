@@ -11,7 +11,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost:27017/policypal', {
+mongoose.connect('mongodb+srv://kiransahu2909:7f1cbmk4FrYDwaCs@cluster0.chpph9a.mongodb.net/policypal?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
