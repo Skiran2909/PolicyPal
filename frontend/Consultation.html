@@ -114,7 +114,7 @@
             message: document.getElementById('message').value.trim(),
             };
 
-            fetch('http://localhost:5000/api/consultation', {
+            fetch('https://policypal-4hrz.onrender.com/api/consultation', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
